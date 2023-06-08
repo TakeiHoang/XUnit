@@ -1,0 +1,5 @@
+// To run test depend on Trait Package
+dotnet test --filter Package="GUI_Regression"
+
+// To run test depend on Trait TestCase
+dotnet test --filter ID="test"
