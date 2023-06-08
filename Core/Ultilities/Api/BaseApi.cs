@@ -19,7 +19,9 @@ namespace Core.Ultilities.Api
     HttpStatusCode expectedStatus = HttpStatusCode.OK)
         {
             // Read the JSON file containing the base URL
-            string jsonSetting = File.ReadAllText("D:\\Code\\XUnit\\Api\\test-settings.json");
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string jsonSetting = File.ReadAllText(Path.Combine(currentDirectory, "Api", "test-settings.json"));
+
             var settingModel = JsonConvert.DeserializeObject<ApiTestSettingsModel>(jsonSetting);
 
             using (HttpClient client = new HttpClient())
