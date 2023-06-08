@@ -25,7 +25,7 @@ jobs:
         run: dotnet build --configuration Release ./Gui/Gui.csproj
 
       - name: Run tests
-        run: dotnet test --configuration Release --no-build --logger trx --filter FullyQualifiedName~YourNamespace.GUI
+        run: dotnet test --configuration Release --no-build --logger trx --filter Package="GUI_Regression"
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
@@ -52,7 +52,7 @@ jobs:
         run: dotnet build --configuration Release ./Api/Api.csproj
 
       - name: Run tests
-        run: dotnet test --configuration Release --no-build --logger trx --filter FullyQualifiedName~YourNamespace.API
+        run: dotnet test --configuration Release --no-build --logger trx --filter Package="API_Regression"
 
       - name: Publish test results
         uses: actions/upload-artifact@v2
