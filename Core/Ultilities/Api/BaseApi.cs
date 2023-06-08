@@ -20,7 +20,7 @@ namespace Core.Ultilities.Api
         {
             // Read the JSON file containing the base URL
             string currentDirectory = Directory.GetCurrentDirectory();
-            string jsonSetting = File.ReadAllText(Path.Combine(currentDirectory, "Api", "test-settings.json"));
+            string jsonSetting = File.ReadAllText(Path.Combine(currentDirectory, "test-settings.json"));
 
             var settingModel = JsonConvert.DeserializeObject<ApiTestSettingsModel>(jsonSetting);
 

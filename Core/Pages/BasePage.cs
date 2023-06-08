@@ -38,7 +38,8 @@ namespace Core.Pages
         public async Task<HomePage> OpenHomePage()
         {
             // Read the JSON file containing the base URL
-            string jsonSetting = File.ReadAllText("D:\\Code\\XUnit\\Gui\\test-settings.json");
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string jsonSetting = File.ReadAllText(Path.Combine(currentDirectory, "test-settings.json"));
             var settingModel = JsonConvert.DeserializeObject<GuiTestSettingsModel>(jsonSetting);
             UI.Go(settingModel.BaseUrl);
             return new HomePage(UI);
