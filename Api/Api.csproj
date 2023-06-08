@@ -31,4 +31,10 @@
     <Folder Include="Utils\Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test-settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

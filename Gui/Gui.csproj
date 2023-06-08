@@ -32,4 +32,10 @@
     <Folder Include="Tests\Payment\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test-settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
