@@ -43,7 +43,7 @@ namespace Core.Ultilities.Web
             new DriverManager().SetUpDriver(new EdgeConfig());
             EdgeOptions options = new EdgeOptions();
             options.AddArguments(
-                "--remote-debugging-port=8080",
+                "--remote-debugging-port=17556",
                 "--allowed-ips",
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
