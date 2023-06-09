@@ -41,9 +41,11 @@ namespace Core.Ultilities.Web
         public static IWebDriver GetEdgeDriver()
         {
             string ip = "127.0.0.1";
+            string iplocal = "localhost";
             new DriverManager().SetUpDriver(new EdgeConfig());
             EdgeOptions options = new EdgeOptions();
             options.AddArguments(
+                $"--allowed-ips={iplocal}",
                 $"--allowed-ips={ip}",
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
