@@ -40,11 +40,11 @@ namespace Core.Ultilities.Web
 
         public static IWebDriver GetEdgeDriver()
         {
+            string ip = "127.0.0.1";
             new DriverManager().SetUpDriver(new EdgeConfig());
             EdgeOptions options = new EdgeOptions();
             options.AddArguments(
-                "--remote-debugging-port=17556",
-                "--allowed-ips",
+                $"--allowed-ips={ip}",
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
                 //"--headless",
