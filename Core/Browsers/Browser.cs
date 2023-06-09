@@ -15,6 +15,7 @@ namespace Core.Browsers
         public Browser(IWebDriver driver, int waitFor = 30000, int pollInterval = 500)
         {
             this.driver = driver;
+            driver.Manage().Window.Maximize();
             JsExecutor = (IJavaScriptExecutor)this.driver;
 
             _wait = new WebDriverWait(this.driver, TimeSpan.FromMilliseconds(waitFor))

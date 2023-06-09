@@ -7,7 +7,7 @@ namespace Gui.Tests.UIValidation
 {
     public class Navigation : BaseUITest
     {
-        public Navigation(ITestOutputHelper outputHelper) : base(DriverType.Edge, outputHelper) { }
+        public Navigation(ITestOutputHelper outputHelper) : base(DriverType.Firefox, outputHelper) { }
 
         [Category(CategoryName.GUI_Regression)]
         [Trait(Category.Package, CategoryName.GUI_Regression)]
